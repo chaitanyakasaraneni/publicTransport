@@ -40,6 +40,7 @@ class Producer:
         #
         self.broker_properties = {
             "bootstrap.servers": BROKER_URL,
+            'group.id': f'{topic_name}',
             "schema.registry.url": SCHEMA_REGISTRY_URL,
         }
 
